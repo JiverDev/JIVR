@@ -55,16 +55,34 @@ body{
 
 
 /* CSS para el home*/
+
+.containerall{
+  width: 100%;
+  height: 420px;
+  display: flex;
+  flex-direction:row;
+  justify-content:space-around;
+  flex-wrap: wrap;
+}
+
+.containerlogos, .containertext{
+  padding: 5px;
+  width: 45%;
+  height: 28em;
+  text-align: center;
+}
+
 .containerlogos{
     text-align: center;
-    width: 50%;
     height:fit-content;
     animation:infinite;
     padding-top: 2rem;
+
 }
 
 .containerlogos img{
     height: 26em;
+    max-width: 100%;
     animation: float 2s linear infinite;
 }
 
@@ -77,28 +95,31 @@ body{
     }
 }
 
-.text{
-    width: 50%;
-    font-size: 280%;
-    color: antiquewhite;
-    position: absolute;
-    right: 0px;
-    top: 12em;
-    text-align: center;
 
-}
 
-.containertext{
-  position: absolute;
-  left: 800px;
-  top: 0em  ;
-  height: 100vh;
-  display: flex;
+.containertext {
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  text-align: center;
+
 }
 
-.containertext p{
+.nombre h1{
+  font-size: 290%;
+  color: antiquewhite;
+  text-align: center;
+  padding-top: 12rem;
+}
+
+.animationtext {
+  position: relative;
+  top: 6rem;
+  text-align: center;
+  align-items: center;
+
+}
+
+.animationtext p{
   font-size: 3rem;
   padding: 0.5rem;
   font-weight: bold;
@@ -108,12 +129,12 @@ body{
   color: #02cac0;
 }
 
-.containertext p span.typedText{
+.animationtext p span.typedText{
   font-weight: normal;
   color: orangered;
 }
 
-.containertext p span.cursor{
+.animationtext p span.cursor{
   display: inline-block;
   background-color: #ffffff;
   margin-left: 0.1rem;
@@ -121,7 +142,7 @@ body{
   animation: blink 1s infinite;
 }
 
-.containertext p span.cursor.typing{
+.animationtext p span.cursor.typing{
   animation: none;
 }
 
