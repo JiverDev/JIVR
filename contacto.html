@@ -6,6 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="icon" type="image/png" href="img/logo1.png">
+
         <title>Contacto</title>
 
         <link rel="stylesheet" href="reset.css">
@@ -27,9 +29,9 @@
                 <nav>
                     <ul>
                         <li><a href="index.html"> Home</li></a>
-                        <li><a href="3ideas.html">3 Ideas</li></a>
+                        <li><a href="3ideas.html">Imagina</li></a>
                         <li><a href="proyectos.html"> Proyectos</li></a>
-                        <li><a href="contacto.html"> Contacto</li></a>
+                        <li><a href="contacto.html"> Contacto</li></a> 
                     </ul>
                   </nav>
             </div>
@@ -38,18 +40,18 @@
 
         <!-- Cuerpo -->
         <main>
-            <form class="formulariodecontacto">
+            <form action="https://formsubmit.co/contactojivr@gmail.com" method="POST" class="formulariodecontacto">
 
                 <label for="nombreapellido">Nombre y apellido</label>
-                <input type="text" id="nombreapellido" class="input-padron" required >
+                <input type="text" name="nombre" id="nombreapellido" class="input-padron" required >
                 
                 <!-- placeholder="texto que desea que este por defecto" -->
                 <label for="correo">Correo electronico</label>
-                <input type="email" id="correo" class="input-padron" required placeholder="email@donimio.com">
+                <input type="email" name="correo" id="correo" class="input-padron" required placeholder="email@donimio.com">
 
                 <!-- required : hace que el input sea obligatorio -->
                 <label for="telefono">Número Celular</label>
-                <input type="tel" id="telefono" class="input-padron" required placeholder="(xx) + xxxxxxxxxx">
+                <input type="tel" name="tel" id="telefono" class="input-padron" required placeholder="(xx) + xxxxxxxxxx">
 
                 <label for="mensaje">Mensaje</label>
                 <textarea id="mensaje " class="input-padron" cols="70" rows="10" required></textarea>
@@ -63,7 +65,7 @@
                     
                     <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
                 </fieldset>
-
+                <!--  
                 <fieldset>
                     <legend>¿En cúal horario prefiere ser atendido?</legend>
                     <select name="" id="">
@@ -72,9 +74,12 @@
                         <option value="">Noche</option>
                     </select>
                 </fieldset>
-
-                <label for="" class="checkbox"><input type="checkbox" checked>¿Le gustaria recibir novedades de JIVR?</label>
                 
+                <label for="" class="checkbox"><input type="checkbox" checked>¿Le gustaria recibir novedades de JIVR?</label>
+                -->
+                <br> 
+                <br> 
+                <br> 
                 <input type="submit" value="Enviar formulario" class="enviar">
             </form>
 
@@ -110,7 +115,7 @@
 
             <div class="whatsapp">
                 <p>Haz clic en el icono de <strong>WhatsApp</strong> y contactanos:</p>
-            <a href="https://api.whatsapp.com/send?phone=+573214669234&text=Hola%2C%20quiero%20hacer%20una%20reserva" target="Hola, Quiero contactarme contigo, ¿puedes hablar ahora?">
+            <a href="https://api.whatsapp.com/send?phone=+573214669234&text=Hola%2C%20Quiero%20contactarme%20contigo%20%C2%BFPuedes%20hablar%20ahora%3F" target="Hola, Quiero contactarme contigo, ¿puedes hablar ahora?">
             <img id="imgwhatsap" src="img/whatsapp.png" alt="WhatsApp">
             </a>
             </div>
@@ -121,9 +126,11 @@
 
         <!-- Pie de pagina -->
         <footer class="footercontact">
-            <img src="img/logoblanco.png" alt="iconic Barber log">
+            <a href="https://jiverdev.github.io/JIVR/" target="new">
+            <h1 class="logo"></h1><img src="img/logoblanco.png" alt="logo jivr"></h1>
+                </a>
             <!-- Para los caracteres especiales se busca y se coloca el que diga "entidad" copyright : &copy, -->
-            <p class="lastpart">&copy, Si llegaste hasta acá, escribeme vía WhatsApp y contactame!</p>
+            <p class="lastpart">&copy, Si llegaste hasta acá, escribeme por WhatsApp y contactame!</p>
         </footer>
         
         </body>

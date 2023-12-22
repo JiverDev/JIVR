@@ -1,98 +1,106 @@
 /* encabezado */
 
-body{
-    font-family: 'EB Garamond', serif;
-    background-color: #010633;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='324' height='324' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%230B1D4C' stroke-width='5.3'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%231B454F'%3E%3Ccircle cx='769' cy='229' r='7'/%3E%3Ccircle cx='539' cy='269' r='7'/%3E%3Ccircle cx='603' cy='493' r='7'/%3E%3Ccircle cx='731' cy='737' r='7'/%3E%3Ccircle cx='520' cy='660' r='7'/%3E%3Ccircle cx='309' cy='538' r='7'/%3E%3Ccircle cx='295' cy='764' r='7'/%3E%3Ccircle cx='40' cy='599' r='7'/%3E%3Ccircle cx='102' cy='382' r='7'/%3E%3Ccircle cx='127' cy='80' r='7'/%3E%3Ccircle cx='370' cy='105' r='7'/%3E%3Ccircle cx='578' cy='42' r='7'/%3E%3Ccircle cx='237' cy='261' r='7'/%3E%3Ccircle cx='390' cy='382' r='7'/%3E%3C/g%3E%3C/svg%3E");
-    }
-  
-  header{
-    background-color: #2a6da766;
-    padding: 20px 0;
-    height: 9em;
-    /*color: rgba(red, green, blue, opacidad); color: rgba(red, green, blue, 3) */
-  }
-  
-  .caja{
-    width: 100%;
-    /* 0 arriba y abajo, y para izq y der (lateral) se encuentra auto: que da la percepcion de estar centralizado*/
-    margin: 0 auto;
-  }
-  
-  .caja img{
-    position: relative;
-    height: 150px;
-    left: 15px;
-  }
+body {
+  font-family: 'EB Garamond', serif;
+  background-color: #010633;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='324' height='324' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%230B1D4C' stroke-width='5.3'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%231B454F'%3E%3Ccircle cx='769' cy='229' r='7'/%3E%3Ccircle cx='539' cy='269' r='7'/%3E%3Ccircle cx='603' cy='493' r='7'/%3E%3Ccircle cx='731' cy='737' r='7'/%3E%3Ccircle cx='520' cy='660' r='7'/%3E%3Ccircle cx='309' cy='538' r='7'/%3E%3Ccircle cx='295' cy='764' r='7'/%3E%3Ccircle cx='40' cy='599' r='7'/%3E%3Ccircle cx='102' cy='382' r='7'/%3E%3Ccircle cx='127' cy='80' r='7'/%3E%3Ccircle cx='370' cy='105' r='7'/%3E%3Ccircle cx='578' cy='42' r='7'/%3E%3Ccircle cx='237' cy='261' r='7'/%3E%3Ccircle cx='390' cy='382' r='7'/%3E%3C/g%3E%3C/svg%3E");
+}
 
-  nav{
-    position: absolute;
-    top: 110px;
-    right: 50px;
-  }
-  
-  nav li{
-    display: inline;
-    /* margin: #arriba, #abajo, #Derecha, #izquierda*/
-    margin: 0 0 0 15px;
-  }
-  
-  nav a{
-    text-transform: uppercase;
-    color: rgb(155, 240, 255);
-    font-weight: bold;
-    font-size: 22px;
-    text-decoration: none;
-  }
-  
-  /* Captura del mause: cambia de color y subraya los enlaces de la barra de navegacion*/
-  nav a:hover{
-    color: #c78c19;
-    text-decoration: underline;
-  }
+header {
+  background-color: #2a6da766;
+  padding: 20px 0;
+  height: 9em;
+  /*color: rgba(red, green, blue, opacidad); color: rgba(red, green, blue, 3) */
+}
+
+.caja {
+  width: 100%;
+  /* 0 arriba y abajo, y para izq y der (lateral) se encuentra auto: que da la percepcion de estar centralizado*/
+  margin: 0 auto;
+}
+
+.caja img {
+  position: relative;
+  height: 150px;
+  left: 15px;
+}
+
+nav {
+  position: absolute;
+  top: 110px;
+  right: 50px;
+}
+
+nav li {
+  display: inline;
+  /* margin: #arriba, #abajo, #Derecha, #izquierda*/
+  margin: 0 0 0 15px;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: rgb(155, 240, 255);
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+/* Captura del mause: cambia de color y subraya los enlaces de la barra de navegacion*/
+nav a:hover {
+  color: #c78c19;
+  text-decoration: underline;
+}
 
 
 
 
 /* CSS para el home*/
 
-.containerall{
+.containerall {
   width: 100%;
   height: 420px;
   display: flex;
-  flex-direction:row;
-  justify-content:space-around;
+  flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.containerlogos, .containertext{
+
+
+
+
+.containerlogos,
+.containertext {
   padding: 5px;
   width: 45%;
   height: 28em;
   text-align: center;
 }
 
-.containerlogos{
-    text-align: center;
-    height:fit-content;
-    animation:infinite;
-    padding-top: 2rem;
+.containerlogos {
+  text-align: center;
+  height: fit-content;
+  animation: infinite;
+  padding-top: 2rem;
 
 }
 
-.containerlogos img{
-    height: 26em;
-    max-width: 100%;
-    animation: float 2s linear infinite;
+.containerlogos img {
+  height: 26em;
+  max-width: 100%;
+  animation: float 2s linear infinite;
 }
 
 @keyframes float {
-    0%, 100%{
-        transform: translateY(0rem);
-    }
-    50%{
-        transform: translateY(-1.5rem);        
-    }
+
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(-1.5rem);
+  }
 }
 
 
@@ -104,7 +112,7 @@ body{
 
 }
 
-.nombre h1{
+.nombre h1 {
   font-size: 290%;
   color: antiquewhite;
   text-align: center;
@@ -119,7 +127,7 @@ body{
 
 }
 
-.animationtext p{
+.animationtext p {
   font-size: 3rem;
   padding: 0.5rem;
   font-weight: bold;
@@ -129,12 +137,12 @@ body{
   color: #02cac0;
 }
 
-.animationtext p span.typedText{
+.animationtext p span.typedText {
   font-weight: normal;
   color: orangered;
 }
 
-.animationtext p span.cursor{
+.animationtext p span.cursor {
   display: inline-block;
   background-color: #ffffff;
   margin-left: 0.1rem;
@@ -142,14 +150,15 @@ body{
   animation: blink 1s infinite;
 }
 
-.animationtext p span.cursor.typing{
+.animationtext p span.cursor.typing {
   animation: none;
 }
 
-@keyframes blink{
+@keyframes blink {
   0% {
     background-color: #ccc;
   }
+
   49% {
     background-color: #ccc;
   }
@@ -158,9 +167,311 @@ body{
 
 
 
+
+
+
+/* Css para Preoyectos */
+
+.container-proyecto {
+  margin: auto;
+  margin-top: 5%;
+  /*place-items: center;
+  /*Centrando un div. Yess*/
+
+  width: 80%;
+  height: 420px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: 10px solid #3ffff5c4;
+  border-radius: 20px;
+  background-color: #3f3737bd;
+  position: relative;
+  /*Para posicionar el objeto que esta dentro.    border: 10px solid #8e8e0c;*/
+}
+
+
+
+.containerall {
+  width: 100%;
+  height: 420px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.leftpart,
+.rightpart {
+
+  width: 48%;
+  height: auto;
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+
+/* Div que encierra el QR, pero no esta haciendo nada. esta por defecto con la imagen
+
+.qr{
+  height: 27%;
+  width:  27%;
+  background-color: #c78c19;
+  overflow: hidden;
+} 
+
+.qr{
+  height: auto;
+  width:  auto;
+  max-width: 120px;
+  max-height: 120px;
+  overflow: hidden;
+} 
+
+PARA RECORTAR UNA IMAGEN, se hace el area 0 0 es superior izquierda y se sigue con la siguiente coord. para formar un área de recorte
+clip-path: polygon(0 5%, 100% 5%, 100% 95%, 0 95%); 
+*/
+.qr img {
+  position: absolute;
+  top: 1%;
+
+  height: auto;
+  width: auto;
+  max-width: 120px;
+  max-height: 115px;
+  border-radius: 35px;
+  border: 2px solid #8d8d8dc4;
+}
+
+.qr img:hover{
+  scale: 1.75;
+  z-index: 1;
+}
+
+.titulop {
+  position: absolute;
+  left: 30%;
+  top: 0px;
+  display: flow-root;
+  height: 30%;
+  width: 70%;
+
+  color: #f86f6f;
+  font-size: 2.5rem;
+
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+
+  background-color: #0000000c;
+  border-radius: 100px;
+}
+
+
+.titulop h1 {
+  position: relative;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+}
+
+.imgproyecto {
+  position: absolute;
+  top: 28%;
+
+  display: flow-root;
+  height: 68%;
+  width: 100%;
+  border-radius: 10px;
+  border: 4px solid rgb(105, 105, 105);
+}
+
+/*
+.imgproyecto:hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(1.02);
+  background: hsla(273,91%,27%, 0.7);
+  transition: transform .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}*/
+
+
+/*
+.titulop h1{
+  text-align: center;
+  padding: 1em, 0;
+} */
+
+/*
+.flexideas {
+    padding: 5px;
+    width: 250px;
+    height: 325px;
+    border: 3px solid rgb(170, 206, 205);
+    background-color: rgba(30, 2, 81, 0.857);
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+*/
+
+
+
+.lineast {
+  position: absolute;
+  top: 2%;
+
+  width: 100%;
+
+
+  background-color: rgba(0, 0, 0, 0.345);
+  border-radius: 7px;
+
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffc08055;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.boton {
+  position: relative;
+  height: 20%;
+  max-width:  100%;
+
+  top: 10%;
+}
+
+
+.boton button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  height: 60%;
+  width: 30%;
+  font-size: 1.5em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 10px;
+  background-color: #5ae02e23;
+
+  color: #7df0fa;
+  text-shadow:
+    1px 1px 2px rgb(0, 0, 0),
+    0 0 1em blue,
+    0 0 0.2em blue;
+  background-color: #40ff0041;
+  animation: parpadeo 2s infinite;
+}
+
+@keyframes parpadeo {
+  0% {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: rgba(98, 255, 0, 0.63);
+    /* Cambia el color del borde a tu elección */
+  }
+
+  100% {
+    border-color: rgba(0, 229, 255, 0.678);
+
+  }
+}
+
+.boton button:hover {
+  scale: 1.03;
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+.descripcionp {
+  position: absolute;
+  top: 25%;
+
+  font-size: 1.5em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #acfffb;
+  height: 50%;
+
+}
+
+.texttoolbox {
+  position: absolute;
+  top: 60%;
+
+  font-size: 2em;
+  text-shadow:
+    1px 1px 2px black,
+    0 0 1em blue,
+    0 0 0.2em blue;
+}
+
+.herramientas {
+  position: absolute;
+  top: 73%;
+
+  height: 25%;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+
+}
+
+.herramientas .slide-track {
+  display: flex;
+  animation: scroll 200s linear infinite;
+  -webkit-animation: scroll 100s linear infinite;
+  width: calc(200px * 6);
+  /*  # Depende del numero de img*/
+}
+
+.herramientas .slide {
+  width: 100%;
+  height: 25%;
+
+}
+
+.herramientas .slide img {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.herramientas .slideh img {
+  width: auto;
+  height: auto;
+
+  max-height: 100px;
+
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(calc(-200px * 7));
+  }
+}
+
+
+
 /* Css para 3ideas*/
 
-.container-3ideas{
+.container-3ideas {
   width: 100%;
   height: 420px;
   display: flex;
@@ -170,7 +481,7 @@ body{
   flex-wrap: wrap;
 }
 
-.flexideas{
+.flexideas {
   padding: 5px;
   width: 250px;
   height: 325px;
@@ -181,189 +492,196 @@ body{
   color: rgb(255, 255, 255);
 }
 
-.flexideas:hover{
+.flexideas:hover {
   transform: scale(1.3);
   background-color: rgba(0, 0, 0, 0.76);
   border: 3px solid rgb(255, 255, 255);
   border-radius: 15px;
   transition: 1s;
   color: white;
-  
 }
 
-.flexideas h2{
+.flexideas h2 {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.productos li:hover h2{
+.productos li:hover h2 {
   font-size: 33px;
 }
 
-.flexideas img{
+.flexideas img {
   opacity: 0.7;
   height: 200px;
   width: 250px;
 }
 
-.producto-descripcion{
+.producto-descripcion {
   font-size: 18px;
 }
 
-.producto-precio{
+.masinfo {
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
 }
 
+.masinfo:hover{
+  cursor: pointer;
+}
 
 
 
-  /* Css para Contacto*/
+/* Css para Contacto*/
 
-.bodycontacto{
+.bodycontacto {
   color: rgb(155, 240, 255);
 }
 
-.formulariodecontacto{
-    width: 700px;
-    margin: 40px  0;
-    margin-left: 10%; 
-  }
-  
-  form label, form legend{
-    display: block;
-    font-size: 20px;
-    /* margin: #arriba #derecha #abajo */
-    margin: 0 0 10px
-  }
-  
-  .input-padron{
-    display: block;
-    /* margin: #arriba #derecha #abajo */
-    margin: 0 0 20px;
-    padding: 10px 25px;
-    width: 50%;
-    background-color: rgba(0, 255, 255, 0.242);
-  }
-  
-  .checkbox{
-    margin: 20px 0;
-  }
-  
-  .enviar{
-    width: 40%;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    background: rgba(0, 187, 255, 0.448);
-    border: none;
-    border-radius: 5px;
-    transition: 1s all;
-    cursor: pointer;
-  }
-  
-  /* id/.class/#/:hover --> Captura del mause, y realizá lo que se le indica en el CSS*/
-  .enviar:hover{
-    background: rgba(42, 110, 205, 0.818);
-    transform: scale(1.1);
-  }
-  
-  /*MIOOOOO*/
-  .imgfinal{
-    position: absolute;
-    top: 250px;
-    right: 230px;
-    width:  250px;
-    height: 300px;
-  }
-  
-  /*MIOOOOO*/
-  .atentiontime{
-    position: absolute;
-    top: 750px;
-    right: 230px;
-    font-size: 30px;
-    font-weight:lighter;
-  }
-  
-  table{
-    margin: 40px 40px;
-    /*NEW for me*/
-    position: absolute;
-    top: 760px;
-    right: 200px;
-    color: white;
-  }
-  
-  thead{
-    background: #a19f9f81;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-  }
-  
-  td, th{
-    border: 1px solid rgb(205, 183, 183);
-    padding: 8px;
-  }
-  
-  .whatsapp{
-    text-align: center;
-    font-size: 20px;
-    font-style: italic;
-    position: absolute;
-    width: 300px;
-    top:  550px;
-    right: 15%;
-  
-  }
-  .whatsapp strong{
-    font-weight: bolder;
-  }
-  
-  #imgwhatsap{
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-  
-  }
-  #imgwhatsap:hover{
-    transform: scale(1.2);
-    transition: 1s;
-    background-color: rgba(118, 224, 64, 0.305);
-  
-  }
-  
-  
-  
-  
-  
-  /* CSS para el footer */
-  
-  .footercontact{
-    text-align: center;
-    background: rgba(0, 0, 0, 0.361);
-    padding: 20px;
+.formulariodecontacto {
+  width: 700px;
+  margin: 40px 0;
+  margin-left: 10%;
+}
 
-  }
-  
-  .footercontact img{
-    height: 100px;
-  }
+form label,
+form legend {
+  display: block;
+  font-size: 20px;
+  /* margin: #arriba #derecha #abajo */
+  margin: 0 0 10px
+}
 
-  .lastpart{
-    color: #ffffff;
-    font-size: 13px;
-    margin: 20px; 
-  }
+.input-padron {
+  display: block;
+  /* margin: #arriba #derecha #abajo */
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+  background-color: rgba(0, 255, 255, 0.242);
+  color: white;
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+.enviar {
+  width: 40%;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 187, 255, 0.448);
+  border: none;
+  border-radius: 5px;
+  transition: 1s all;
+  cursor: pointer;
+}
+
+/* id/.class/#/:hover --> Captura del mause, y realizá lo que se le indica en el CSS*/
+.enviar:hover {
+  background: rgba(42, 110, 205, 0.818);
+  transform: scale(1.1);
+}
+
+/*MIOOOOO*/
+.imgfinal {
+  position: absolute;
+  top: 250px;
+  right: 230px;
+  width: 250px;
+  height: 300px;
+}
+
+/*MIOOOOO*/
+.atentiontime {
+  position: absolute;
+  top: 750px;
+  right: 230px;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+table {
+  margin: 40px 40px;
+  /*NEW for me*/
+  position: absolute;
+  top: 760px;
+  right: 200px;
+  color: white;
+}
+
+thead {
+  background: #a19f9f81;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid rgb(205, 183, 183);
+  padding: 8px;
+}
+
+.whatsapp {
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  position: absolute;
+  width: 300px;
+  top: 550px;
+  right: 15%;
+
+}
+
+.whatsapp strong {
+  font-weight: bolder;
+}
+
+#imgwhatsap {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+
+}
+
+#imgwhatsap:hover {
+  transform: scale(1.2);
+  transition: 1s;
+  background-color: rgba(112, 224, 64, 0.071);
+
+}
 
 
-  @media (min-widh:600px){
-    header{
-      flex-direction: row;
-      padding: 0px 30px;
-      justify-content: space-between;
-    }
+
+
+
+/* CSS para el footer */
+
+.footercontact {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.361);
+  padding: 20px;
+
+}
+
+.footercontact img {
+  height: 100px;
+}
+
+.lastpart {
+  color: #ffffff;
+  font-size: 13px;
+  margin: 20px;
+}
+
+
+@media (min-widh:600px) {
+  header {
+    flex-direction: row;
+    padding: 0px 30px;
+    justify-content: space-between;
   }
+}
