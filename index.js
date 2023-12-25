@@ -39,3 +39,7 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function() { //on DOM load initiate the effect
     if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+
+
+
