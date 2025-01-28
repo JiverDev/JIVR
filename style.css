@@ -602,6 +602,7 @@ clip-path: polygon(0 5%, 100% 5%, 100% 95%, 0 95%);
   height: auto;
   max-width: 200px;
   max-height: 100px;
+  margin-left: 30px;
 }
 
 .herramientas .slideh img {
@@ -889,4 +890,106 @@ th {
     padding: 0px 30px;
     justify-content: space-between;
   }
+}
+
+
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    header .caja {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .container-proyecto {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .leftpart, .rightpart {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .leftpart img, .rightpart img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .rightpart h3 {
+        font-size: 18px;
+    }
+
+    .rightpart .boton button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+    .rightpart .descripcionp {
+        font-size: 16px;
+    }
+
+    .rightpart .texttoolbox h2 {
+        font-size: 18px;
+    }
+
+    .herramientas .slide {
+        width: 50px;
+        margin: 5px;
+    }
+    .titulop h1 {
+      position: relative;
+      top: 45%;
+      left: 30%;
+      transform: translateX(-50%) translateY(-50%);
+      text-align: center;
+  }
+  
+}
+
+/* Ajustes adicionales para tamaños de pantalla más pequeños */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+    .titulop {
+      font-size: 20px;
+    }
+
+    .container-proyecto {
+        padding: 10px;
+    }
+
+    .rightpart h3 {
+        font-size: 16px;
+    }
+
+    .rightpart .boton button {
+        font-size: 14px;
+    }
+
+    .rightpart .descripcionp {
+        font-size: 14px;
+    }
+
+    .rightpart .texttoolbox h2 {
+        font-size: 16px;
+    }
+
+    .herramientas .slide {
+        width: 40px;
+        margin: 5px;
+    }
 }
