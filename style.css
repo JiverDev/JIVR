@@ -1,9 +1,11 @@
+
 /* encabezado */
 
 body {
   font-family: 'EB Garamond', serif;
   background-color: #010633;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='324' height='324' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%230B1D4C' stroke-width='5.3'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%231B454F'%3E%3Ccircle cx='769' cy='229' r='7'/%3E%3Ccircle cx='539' cy='269' r='7'/%3E%3Ccircle cx='603' cy='493' r='7'/%3E%3Ccircle cx='731' cy='737' r='7'/%3E%3Ccircle cx='520' cy='660' r='7'/%3E%3Ccircle cx='309' cy='538' r='7'/%3E%3Ccircle cx='295' cy='764' r='7'/%3E%3Ccircle cx='40' cy='599' r='7'/%3E%3Ccircle cx='102' cy='382' r='7'/%3E%3Ccircle cx='127' cy='80' r='7'/%3E%3Ccircle cx='370' cy='105' r='7'/%3E%3Ccircle cx='578' cy='42' r='7'/%3E%3Ccircle cx='237' cy='261' r='7'/%3E%3Ccircle cx='390' cy='382' r='7'/%3E%3C/g%3E%3C/svg%3E");
+  
 }
 
 
@@ -15,20 +17,20 @@ body {
 
   /*color: rgba(red, green, blue, opacidad); color: rgba(red, green, blue, 3) */
   background-color: #2a6da766;
-  padding: 20px 0;
-  max-height: 9em;
+  padding: 10px 0;
+  max-height: 8em;
 
 }
 
-.logo {
+.logoup {
   position: relative;
-  height: 150px;
+  height: 130px;
   left: 15px;
 }
 
 nav {
   position: absolute;
-  top: 110px;
+  top: 90px;
   right: 50px;
 }
 
@@ -55,16 +57,17 @@ nav a:hover {
 }
  
 
+
+
+
 /*para hacerlo responsive*/
-
-
 
 
 
 @media(max-width:991px) {
   nav {
     position: absolute;
-    top: 50px;
+    top: 30px;
     left: 60%;
     text-align: left;
   }
@@ -322,176 +325,182 @@ nav a:hover {
 
 
 
+/* ========== [ESTILOS ESPECÍFICOS PARA HOME] ========== */
+.home-page {
+  position: fixed; /* Fija el body para evitar scroll */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Elimina todo tipo de scroll */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page header {
+  flex-shrink: 0; /* Evita que el header se encoja */
+  width: 100%;
+}
+
+.home-page main {
+  flex: 1; /* Ocupa todo el espacio restante */
+  overflow: hidden; /* Previene scroll interno */
+  width: 100%;
+}
+
+.home-page .containerall {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+/* ========== [RESPONSIVE - SIN DESBORDAMIENTOS] ========== */
+@media (max-width: 991px) { /* Tablet y móviles grandes */
+  .home-page .containerall {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .home-page .containerlogos,
+  .home-page .containertext {
+    width: auto !important;
+    height: auto !important;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .home-page .containerlogos img {
+    max-height: 40vh; /* Altura proporcional */
+    width: auto;
+    padding-top: 3rem;
+  }
+
+  .home-page .nombre h1 {
+    font-size: 2rem;
+    padding-top: 4rem
+  }
+}
+
+@media (max-width: 576px) { /* Móviles pequeños */
+  .home-page .animationtext p {
+    font-size: 3rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0rem;
+    overflow: hidden;
+    color: #02cac0;
+    height: auto;
+  }
+
+  .animationtext {
+    top: 0rem; 
+
+  }
+
+  .home-page .nombre h1 {
+    font-size: 2rem !important;
+  }
+
+}
 
 
 
 
 
-/* Css para Preoyectos */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Css para Proyectos */
+
+/* Estilos Base */
+body {
+  overflow-x: hidden;
+}
 
 .container-proyecto {
-  margin: auto;
-  margin-top: 5%;
-  /*place-items: center;
-  /*Centrando un div. Yess*/
-
+  margin: 5% auto 0;
   width: 80%;
   height: 420px;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   border: 10px solid #3ffff5c4;
   border-radius: 20px;
   background-color: #3f3737bd;
   position: relative;
-  /*Para posicionar el objeto que esta dentro.    border: 10px solid #8e8e0c;*/
 }
 
-
-
-.containerall {
-  width: 100%;
-  height: 420px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.leftpart,
-.rightpart {
-
+.leftpart, .rightpart {
   width: 48%;
   height: auto;
-  color: rgb(255, 255, 255);
+  color: #fff;
   position: relative;
 }
 
-/* Div que encierra el QR, pero no esta haciendo nada. esta por defecto con la imagen
-
-.qr{
-  height: 27%;
-  width:  27%;
-  background-color: #c78c19;
-  overflow: hidden;
-} 
-
-.qr{
-  height: auto;
-  width:  auto;
-  max-width: 120px;
-  max-height: 120px;
-  overflow: hidden;
-} 
-
-PARA RECORTAR UNA IMAGEN, se hace el area 0 0 es superior izquierda y se sigue con la siguiente coord. para formar un área de recorte
-clip-path: polygon(0 5%, 100% 5%, 100% 95%, 0 95%); 
-*/
 .qr img {
   position: absolute;
   top: 1%;
-
-  height: auto;
-  width: auto;
   max-width: 120px;
   max-height: 115px;
   border-radius: 35px;
   border: 2px solid #8d8d8dc4;
 }
 
-.qr img:hover{
-  scale: 1.75;
+.qr img:hover {
+  transform: scale(1.75);
   z-index: 1;
 }
 
 .titulop {
   position: absolute;
   left: 30%;
-  top: 0px;
-  display: flow-root;
-  height: 30%;
+  top: 0;
   width: 70%;
-
+  height: 30%;
   color: #f86f6f;
   font-size: 2.5rem;
-
-  text-shadow:
-    1px 1px 2px black,
-    0 0 1em blue,
-    0 0 0.2em blue;
-
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
   background-color: #0000000c;
   border-radius: 100px;
-}
-
-
-.titulop h1 {
-  position: relative;
-  top: 45%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .imgproyecto {
   position: absolute;
   top: 28%;
-
-  display: flow-root;
+  width: 100%;
   height: 68%;
-  width: 100%;
   border-radius: 10px;
-  border: 4px solid rgb(105, 105, 105);
+  border: 4px solid #696969;
 }
-
-/*
-.imgproyecto:hover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  transform: scale(1.02);
-  background: hsla(273,91%,27%, 0.7);
-  transition: transform .5s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}*/
-
-
-/*
-.titulop h1{
-  text-align: center;
-  padding: 1em, 0;
-} */
-
-/*
-.flexideas {
-    padding: 5px;
-    width: 250px;
-    height: 325px;
-    border: 3px solid rgb(170, 206, 205);
-    background-color: rgba(30, 2, 81, 0.857);
-    border-radius: 10px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-*/
-
-
 
 .lineast {
   position: absolute;
   top: 2%;
-
   width: 100%;
-
-
   background-color: rgba(0, 0, 0, 0.345);
   border-radius: 7px;
-
   text-align: center;
   text-transform: uppercase;
   color: #ffc08055;
@@ -500,130 +509,244 @@ clip-path: polygon(0 5%, 100% 5%, 100% 95%, 0 95%);
 
 .boton {
   position: relative;
-  height: 20%;
-  max-width:  100%;
-
   top: 10%;
+  height: 20%;
+  max-width: 100%;
 }
 
-
 .boton button {
+  /* Estilos base que ya tenías */
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
-  height: 60%;
-  width: 30%;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 10px;
-  background-color: #5ae02e23;
-
   color: #7df0fa;
-  text-shadow:
-    1px 1px 2px rgb(0, 0, 0),
-    0 0 1em blue,
-    0 0 0.2em blue;
-  background-color: #40ff0041;
+  text-shadow: 1px 1px 2px #000, 0 0 1em blue, 0 0 0.2em blue;
+  background-color: #5ae02e23;
   animation: parpadeo 2s infinite;
+  cursor: pointer;
+
+  /* Nuevos estilos para ajuste al texto */
+  padding: 0.5em 1em; /* Espaciado interno proporcional al tamaño de fuente */
+  min-width: max-content; /* Evita que el botón sea más pequeño que el texto */
+  white-space: nowrap; /* Evita saltos de línea */
+  
+  /* Para centrado vertical si es necesario */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes parpadeo {
-  0% {
-    border-color: transparent;
-  }
-
-  50% {
-    border-color: rgba(98, 255, 0, 0.63);
-    /* Cambia el color del borde a tu elección */
-  }
-
-  100% {
-    border-color: rgba(0, 229, 255, 0.678);
-
+/* Versión móvil */
+@media (max-width: 767px) {
+  .boton button {
+    width: auto; /* Ancho automático basado en el contenido */
+    min-width: 150px; /* Ancho mínimo para evitar botones demasiado pequeños */
   }
 }
 
 .boton button:hover {
-  scale: 1.03;
-  transition-duration: 1s;
-  cursor: pointer;
+  transform: translateX(-50%) scale(1.03);
+  transition: transform 1s;
 }
 
 .descripcionp {
   position: absolute;
   top: 25%;
-
-  font-size: 1.5em;
+  height: 50%;
+  font-size: 1.5rem;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #acfffb;
-  height: 50%;
-
 }
 
 .texttoolbox {
   position: absolute;
   top: 60%;
-
-  font-size: 2em;
-  text-shadow:
-    1px 1px 2px black,
-    0 0 1em blue,
-    0 0 0.2em blue;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 .herramientas {
   position: absolute;
   top: 73%;
-
   height: 25%;
   width: 100%;
   margin: auto;
   overflow: hidden;
-
 }
 
 .herramientas .slide-track {
   display: flex;
-  animation: scroll 200s linear infinite;
-  -webkit-animation: scroll 100s linear infinite;
+  animation: scroll 100s linear infinite;
   width: calc(200px * 6);
-  /*  # Depende del numero de img*/
 }
 
 .herramientas .slide {
-  width: 100%;
-  height: 25%;
-
+  max-width: 200px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .herramientas .slide img {
-  width: auto;
-  height: auto;
-  max-width: 200px;
-  max-height: 100px;
-  margin-left: 30px;
+  max-width: 80%;
+  max-height: 80%;
+  margin: 0 15px;
 }
 
-.herramientas .slideh img {
-  width: auto;
-  height: auto;
 
-  max-height: 100px;
 
+
+
+
+
+
+
+
+
+
+
+
+/* Animaciones */
+@keyframes parpadeo {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: rgba(98, 255, 0, 0.63); }
 }
 
 @keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-200px * 7)); }
+}
 
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(calc(-200px * 7));
+/* Media Queries */
+@media (max-width: 767px) {
+  .container-proyecto {
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .leftpart, .rightpart {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .qr, .lineast {
+    display: none;
+  }
+  
+  .titulop {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+    font-size: 1.8rem;
+    padding: 10px 0;
+  }
+  
+  .imgproyecto {
+    position: relative;
+    top: 0;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .boton {
+    position: relative;
+    top: 0;
+    margin: 20px 0 15px;
+  }
+  
+  .boton button {
+    position: absolute;
+    left: 25%;
+    top: -82px;
+    background-color: #14350adb;
+    transform: none;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+  
+  .descripcionp {
+    position: relative;
+    top: 0;
+    height: auto;
+    font-size: 1rem;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+  
+  .texttoolbox {
+    position: relative;
+    top: 0;
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .herramientas {
+    position: relative;
+    top: 0;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .herramientas .slide-track {
+    animation: scroll 100s linear infinite;
+    width: calc(150px * 14);
+  }
+  
+  .herramientas .slide {
+    width: 100px;
+    height: 60px;
+  }
+  
+  .herramientas .slide img {
+    max-width: 70px;
+    max-height: 40px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container-proyecto {
+    width: 90%;
+  }
+  
+  .titulop {
+    font-size: 2rem;
+  }
+  
+  .descripcionp {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -771,35 +894,8 @@ form legend {
   height: 300px;
 }
 
-/*MIOOOOO*/
-.atentiontime {
-  position: absolute;
-  top: 750px;
-  right: 230px;
-  font-size: 30px;
-  font-weight: lighter;
-}
 
-table {
-  margin: 40px 40px;
-  /*NEW for me*/
-  position: absolute;
-  top: 760px;
-  right: 200px;
-  color: white;
-}
 
-thead {
-  background: #a19f9f81;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-}
-
-td,
-th {
-  border: 1px solid rgb(205, 183, 183);
-  padding: 8px;
-}
 
 .whatsapp {
   text-align: center;
@@ -807,7 +903,7 @@ th {
   font-style: italic;
   position: absolute;
   width: 300px;
-  top: 550px;
+  top: 570px;
   right: 15%;
 
 }
@@ -820,7 +916,6 @@ th {
   height: 100px;
   width: 100px;
   border-radius: 50px;
-
 }
 
 #imgwhatsap:hover {
@@ -864,33 +959,104 @@ th {
 
 
 
+
+
+
+
+
+
+
+
+
 /* CSS para el footer */
 
-.footercontact {
+
+/* Estilos Generales del Footer */
+.site-footer {
+  background-color: #0000004e;
+  color: #ecf0f1;
+  padding: 1rem 0 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 0 5%;
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
-  background: rgba(0, 0, 0, 0.361);
-  padding: 20px;
-
-}
-
-.footercontact img {
-  height: 100px;
-}
-
-.lastpart {
-  color: #ffffff;
-  font-size: 13px;
-  margin: 20px;
 }
 
 
-@media (min-widh:600px) {
-  header {
-    flex-direction: row;
-    padding: 0px 30px;
-    justify-content: space-between;
+/* Secciones del Footer */
+.credit-footer {
+  font-size: 0.5rem;
+}
+
+.footer-logo {
+  max-width: 150px;
+}
+
+
+
+
+
+/* Parte Inferior del Footer */
+.footer-bottom {
+  background-color: #0000001b;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #7f8c8d;
+}
+
+.footer-bottom a {
+  color: #389192;
+  text-decoration: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 2fr;
+    gap: 1.5rem;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .footer-section h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  .footer-section ul li a:hover {
+    transform: none;
   }
 }
+
+
+
+
+
+
+
 
 
 
@@ -918,7 +1084,7 @@ th {
 
     .leftpart, .rightpart {
         width: 100%;
-        margin: 10px 0;
+        margin-bottom: 0px;
     }
 
     .leftpart img, .rightpart img {
@@ -933,8 +1099,7 @@ th {
 
     .rightpart .boton button {
         width: 100%;
-        padding: 10px 0;
-        font-size: 16px;
+        font-size: 1.5rem;
     }
 
     .rightpart .descripcionp {
@@ -950,22 +1115,23 @@ th {
         margin: 5px;
     }
     .titulop h1 {
-      position: relative;
-      top: 45%;
-      left: 30%;
-      transform: translateX(-50%) translateY(-50%);
-      text-align: center;
-  }
+        text-align: center;
+    }
+
+    .texttoolbox {
+        position: relative;
+        top: 0;
+        font-size: 1.5rem;
+        /* text-align: center; */
+        margin: 10px 0 0 30px;
+    }
   
 }
 
 /* Ajustes adicionales para tamaños de pantalla más pequeños */
 @media (max-width: 480px) {
     header {
-        padding: 10px 0;
-    }
-    .titulop {
-      font-size: 20px;
+        padding: 0px 0;
     }
 
     .container-proyecto {
@@ -977,7 +1143,7 @@ th {
     }
 
     .rightpart .boton button {
-        font-size: 14px;
+        font-size: 1.5rem;
     }
 
     .rightpart .descripcionp {
@@ -992,4 +1158,14 @@ th {
         width: 40px;
         margin: 5px;
     }
+
+    .texttoolbox {
+        position: relative;
+        top: 0;
+        font-size: 1.5rem;
+        text-align: start;
+        margin: 10px 0 10px 30px;
+    }
+    
+
 }
