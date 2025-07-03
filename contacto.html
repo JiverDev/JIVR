@@ -1,132 +1,174 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        <link rel="icon" type="image/png" href="img/logo1.png">
-
-        <title>Contacto</title>
-
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        
-
-        <!-- trae un formato de tipo de texto de google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
-    </head>
+    
 
 
-    <body class="bodycontacto">
-        
-        <!-- Encabezado -->
-        <header>
-            <div class="caja">
-                <img class="logoup" src="img/logoblanco.png" alt="xx">
+    <link rel="icon" type="image/png" href="img/logo1.png">
+
+    <title>Contacto</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- trae un formato de tipo de texto de google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap" rel="stylesheet">
+</head>
+
+
+<body class="bodycontacto">
+
+    <!-- Encabezado -->
+    <header>
+        <div class="caja">
+            <img class="logoup" src="img/logoblanco.png" alt="xx">
+
+            <nav>
+                <ul>
+                    <li><a href="index.html"> Home</li></a>
+                    <li><a href="3ideas.html">Imagina</li></a>
+                    <li><a href="proyectos.html"> Proyectos</li></a>
+                    <li><a href="contacto.html" style="color:#ffffff;"> Contacto</li></a>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- Cuerpo -->
+    <main class="cuerpocontact">
+
+        <div class="contact-header">
+            <h1>Contacto</h1>
+            <p>¿Tienes alguna pregunta o necesitas más información? Estoy aquí para ayudarte. Completa el
+                formulario o envíame un mensaje vía WhatsApp/Correo electronico</p>
+        </div>
+        <div class="contact-container">
+
+            <div class="contact-form-container">
                 
-                <nav>
-                    <ul>
-                        <li><a href="index.html"> Home</li></a>
-                        <li><a href="3ideas.html">Imagina</li></a>
-                        <li><a href="proyectos.html"> Proyectos</li></a>
-                        <li><a href="contacto.html" style="color:#ffffff;"> Contacto</li></a> 
-                    </ul>
-                  </nav>
+                <form action="https://formspree.io/f/mnnvrpeq" method="POST" id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input placeholder="¿Cómo te llamas?" type="text" id="nombre" name="nombre" class="form-control" required>
+                        <i class="fas fa-user input-icon"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input placeholder="tucorreo@ejemplo.com" type="email" id="email" name="email" class="form-control" required>
+                        <i class="fas fa-envelope input-icon"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input placeholder="+57 3214669234" type="tel" id="telefono" name="telefono" class="form-control">
+                        <i class="fas fa-phone-alt input-icon"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="servicio">¿Cómo prefieres que te contactemos?</label>
+                        <div class="relative">
+                            <select id="servicio" name="servicio" class="form-control" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="WhatsApp">WhatsApp</option>
+                                <option value="Correo">Correo electrónico</option>
+                                <option value="Telefono">Llamada telefónica</option>
+                            </select>
+                            <i class="fas fa-chevron-down input-icon"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Tu mensaje</label>
+                        <textarea placeholder="Escribe tu mensaje aquí..."  id="mensaje" name="mensaje" class="form-control" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Enviar mensaje
+                    </button>
+
+                    <input type="hidden" name="_next" value="https://jiverdev.github.io/JIVR/thank-you.html">
+                    <input type="hidden" name="_autoresponse"
+                        value="Gracias por contactarnos. Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
             </div>
-            
-        </header>
 
-        <!-- Cuerpo -->
-        <main>
-            <form action="https://formsubmit.co/contacto.jivr@gmail.com" method="POST" class="formulariodecontacto">
+            <div class="contact-info">
+                <div class="logocontact">
+                    <img src="img/logorojo.png" alt="">
+                </div>
 
-                <label for="nombreapellido">Nombre</label>
-                <input type="text" name="nombre" id="nombreapellido" class="input-padron" required >
-                
-                <!-- placeholder="texto que desea que este por defecto" -->
-                <label for="correo">Correo electronico</label>
-                <input type="email" name="email" id="correo" class="input-padron" required placeholder="email@donimio.com">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Correo electrónico</h3>
+                        <a href="mailto:contacto.jivr@gmail.com">contacto.jivr@gmail.com</a>
+                    </div>
+                </div>
 
-                <!-- required : hace que el input sea obligatorio -->
-                <label for="telefono">Número Celular</label>
-                <input type="tel" name="tel" id="telefono" class="input-padron" required placeholder="(xx) + xxxxxxxxxx">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>WhatsApp</h3>
+                        <a href="tel:+573214669234">+57 321 466 9234</a>
+                    </div>
+                </div>
 
-                <label for="mensaje">Mensaje</label>
-                <textarea type="textarea" name="mensaje" id="mensaje " class="input-padron" cols="70" rows="10" required></textarea>
-                
-                <fieldset>
-                    <legend>¿Cómo prefieres que te contactemos?</legend>
-
-                    <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
-                    
-                    <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Telefono</label>
-                    
-                    <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
-                </fieldset>
-                <!--  
-                <fieldset>
-                    <legend>¿En cúal horario prefiere ser atendido?</legend>
-                    <select name="" id="">
-                        <option value="">Mañana</option>
-                        <option value="">Tarde</option>
-                        <option value="">Noche</option>
-                    </select>
-                </fieldset>
-                
-                <label for="" class="checkbox"><input type="checkbox" checked>¿Le gustaria recibir novedades de JIVR?</label>
-                -->
-                <br> 
-                <br> 
-                <br> 
-                <input type="submit" value="Enviar formulario" class="enviar">
-
-                <input type="hidden" name="_next" value="https://jiverdev.github.io/JIVR/contacto.html">
-                <input type="hidden" name="_autoresponse" value="Hola, su mensaje ha sido recibido correctamente.">
-
-            </form>
-
-
-            <img class="imgfinal" src="img/logorojo.png" alt="Imagen barberia IA">
-
-            
-
-            <div class="whatsapp">
-                <p>Tambien puedes escribir por <strong>WhatsApp</strong>:</p>
-            <a href="https://api.whatsapp.com/send?phone=+573214669234&text=Hola%2C%20Quiero%20contactarme%20contigo%20%C2%BFPuedes%20hablar%20ahora%3F" target="Hola, Quiero contactarme contigo, ¿puedes hablar ahora?">
-            <img id="imgwhatsap" src="img/whatsapp.png" alt="WhatsApp">
-            </a>
-            </div>
-            
-
-        </main>
-
-
-        <!-- Pie de pagina -->
-        <footer class="site-footer">
-            <div class="footer-content">
-
-                <!-- Logo y breve descripción -->
-                <div class="footer-section">
-                    <a href="https://jiverdev.github.io/JIVR/index.html" target="_blank"><img src="img/logoblanco.png" alt="Logo" class="footer-logo"></a>
+                <!-- WhatsApp Floating Button (mobile only) -->
+                <div id="whatsapp-button" class="animate-bounce">
+                    <a href="https://wa.me/573214669234" aria-label="Contact us via WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
                 
+
             </div>
 
-            <!-- Copyright y créditos -->
-            <div class="footer-bottom">
-                <p>© Desarrollado por <a href="https://jiverdev.github.io/JIVR/index.html" target="_blank">JIVR.</a> Todos los derechos reservados.</p>
-                <div class="credit-footer">
-                    <p>Desarrollado por <a href="https://jiverdev.github.io/JIVR/index.html" target="_blank">JIVR</a></p>
-                    <p>Iconos por <a href="https://www.flaticon.com" target="_blank">Flaticon</a></p>
-                </div>
-            </div>
-        </footer>
-        
-        </body>
-    </html>
+        </div>
+    </main>
 
-   
+
+
+    
+
+    <!-- Pie de pagina -->
+    <footer class="site-footer">
+        <div class="footer-content">
+
+            <!-- Logo y breve descripción -->
+            <div class="footer-section">
+                <a href="https://jiverdev.github.io/JIVR/index.html" target="_blank"><img src="img/logoblanco.png"
+                        alt="Logo" class="footer-logo"></a>
+            </div>
+
+        </div>
+
+        <!-- Copyright y créditos -->
+        <div class="footer-bottom">
+            <p>© Desarrollado por <a href="https://jiverdev.github.io/JIVR/index.html" target="_blank">JIVR.</a> Todos
+                los derechos reservados.</p>
+            <div class="credit-footer">
+                <p>Desarrollado por <a href="https://jiverdev.github.io/JIVR/index.html" target="_blank">JIVR</a></p>
+                <p>Iconos por <a href="https://www.flaticon.com" target="_blank">Flaticon</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
